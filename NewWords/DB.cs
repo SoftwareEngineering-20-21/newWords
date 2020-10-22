@@ -24,11 +24,13 @@ namespace NewWords
     }
     public class LastResult
     {
+        public int id { get; set; }
         public int UserId { get; set; }
+
         public int AmountGuessed { get; set; }
         public int TotalAmount { get; set; }
-        public string NativeLanguage { get; set; }
-        public string GuessedLanguage { get; set; }
+        public int NativeLanguage { get; set; }
+        public int GuessedLanguage { get; set; }
 
     }
 
