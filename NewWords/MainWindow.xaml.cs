@@ -23,21 +23,12 @@ namespace NewWords
     {
         public MainWindow()
         {
-            using(var dbConnect = new AppContext())
-            {
-                this.Title = "Working with db";
-                Thread.Sleep(1000);
-                dbConnect.Add(new Language { id = 0 , code="UKR"}) ;
-                this.Title = "Added ukrainian";
-                Thread.Sleep(1000);
-                dbConnect.Add(new Language { code = "ENG" });
-                this.Title = "Added english";
-                dbConnect.SaveChanges();
-                Thread.Sleep(1000);
-                var langs = dbConnect.Languages;
-                this.Title = langs.ToArray().ToString();
-            }
-            InitializeComponent();
+            
+        }
+
+        private void playButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
