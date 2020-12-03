@@ -30,5 +30,10 @@ namespace NewWords
         {
 
         }
+
+        private void resultsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
