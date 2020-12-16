@@ -27,19 +27,19 @@ namespace NewWords
             }
         }
 
-        private void FourthTranslation_OnClick(object sender, RoutedEventArgs e)
+        private void SecondTranslation_OnClick(object sender, RoutedEventArgs e)
         {
-            bool result = game.Guess(game.Vocab[game.Counter].t2);
+            bool result = game.Guess(game.Vocab[game.Counter].t4);
             if (result)
             {
-                secondTranslation.Background = new SolidColorBrush(Colors.Green);
+               secondTranslation.Background = new SolidColorBrush(Colors.Green);
             }
             else
             {
                 secondTranslation.Background = new SolidColorBrush(Colors.Red);
             }
         }
-
+        
         private void ThirdTranslation_OnClick(object sender, RoutedEventArgs e)
         {
             bool result = game.Guess(game.Vocab[game.Counter].t3);
@@ -52,10 +52,10 @@ namespace NewWords
                 thirdTranslation.Background = new SolidColorBrush(Colors.Red);
             }
         }
-
-        private void SecondTranslation_OnClick(object sender, RoutedEventArgs e)
+        
+        private void FourthTranslation_OnClick(object sender, RoutedEventArgs e)
         {
-            bool result = game.Guess(game.Vocab[game.Counter].t4);
+            bool result = game.Guess(game.Vocab[game.Counter].t2);
             if (result)
             {
                 fourthTranslation.Background = new SolidColorBrush(Colors.Green);
