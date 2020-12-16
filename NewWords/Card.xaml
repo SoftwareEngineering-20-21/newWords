@@ -5,8 +5,62 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:NewWords"
         mc:Ignorable="d"
-        Title="Card" Height="450" Width="800">
-    <Grid>
-        
+        Title="Card" Height="1024" Width="1440" ResizeMode="NoResize">
+    <Grid Height="1008" VerticalAlignment="Bottom">
+        <Button 
+            x:Name="startRound" 
+            Width="318" Height="92" Background="Aqua" 
+            BorderBrush="Black"
+            Margin="10 , 10 , 1072 ,900 "
+            Grid.ColumnSpan="2" FontSize="48"
+            Click="StartRound_OnClick">
+            <TextBlock Name="startRoundLabel">Start round</TextBlock>
+        </Button>
+        <ProgressBar Name="roundProgress" Width="1000" Height="92" Margin="340, 10, 10, 900" Maximum="30"></ProgressBar>
+        <Button 
+            x:Name="wordOrigin" 
+            Width="318" Height="92" Background="Aqua" 
+            BorderBrush="Black" 
+            Margin="500,242,500,674" 
+            Grid.ColumnSpan="2" FontSize="48"
+            Click="WordOrigin_OnClick">
+            <TextBlock Name="originLabel"></TextBlock>
+        </Button>
+        <Button 
+            x:Name="firstTranslation" 
+            Width="318" Height="92" Background="Aqua"  
+            BorderBrush="Black" 
+            Margin="50,674,1072,242" 
+            Grid.ColumnSpan="2" FontSize="48"
+            Click="FirstTranslation_OnClick">
+            <TextBlock Name="firstTLabel"></TextBlock>
+        </Button>
+        <Button 
+            x:Name="secondTranslation" 
+            Width="318" Height="92" Background="Aqua"  
+            BorderBrush="Black" 
+            Margin="1072,674,50,242" 
+            Grid.ColumnSpan="2" FontSize="48"
+            Click="SecondTranslation_OnClick">
+            <TextBlock Name="secondTLabel"></TextBlock>
+        </Button>
+        <Button 
+            x:Name="thirdTranslation" 
+            Width="318" Height="92" Background="Aqua"  
+            BorderBrush="Black" 
+            Margin="50,874,1072,42" 
+            Grid.ColumnSpan="2" FontSize="48"
+            Click="ThirdTranslation_OnClick">
+            <TextBlock Name="thirdTLabel"></TextBlock>
+        </Button>
+        <Button 
+            x:Name="fourthTranslation" 
+            Width="318" Height="92" Background="Aqua" 
+            BorderBrush="Black" 
+            Margin="1072,874,50,42" 
+            Grid.ColumnSpan="2" FontSize="48"
+            Click="FourthTranslation_OnClick">
+            <TextBlock Name="fourthTLabel"></TextBlock>
+        </Button>
     </Grid>
 </Window>

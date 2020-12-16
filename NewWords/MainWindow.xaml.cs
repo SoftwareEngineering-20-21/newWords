@@ -22,7 +22,7 @@ namespace NewWords
     /// </summary>
     public partial class MainWindow : Window
     {
-        private GameContext game;
+        public GameContext game;
         public MainWindow()
         {
             
@@ -41,10 +41,9 @@ namespace NewWords
         private void PlayRoundButton_OnClick(object sender, RoutedEventArgs e)
         {
             this.game = new GameContext();
-            Card firstCard = new Card();
+            Card firstCard = new Card(game);
             firstCard.Owner = this;
             firstCard.Show();
-            this.Close();
         }
     }
 }
