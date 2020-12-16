@@ -21,7 +21,7 @@ namespace NewWords.Models
         }
         public List<Word> GenerateCards()
         {
-            var words = new List<Word>;
+            var words = new List<Word>();
             using (var context = new AppContext())
             {
                 for(int i = 0; i < 10; i++)
