@@ -20,7 +20,7 @@ namespace NewWords.Models
             this.t3 = t3;
             this.t4 = t4;
             this.definition = definition;
-            this.orig = orig;
+            this.right = right;
 
         }
     }

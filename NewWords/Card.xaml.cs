@@ -16,6 +16,7 @@ namespace NewWords
         
         private void FirstTranslation_OnClick(object sender, RoutedEventArgs e)
         {
+            this.Title = game.Vocab[game.Counter].right;
             bool result = game.Guess(game.Vocab[game.Counter].t1);
             if (result)
             {
@@ -29,7 +30,8 @@ namespace NewWords
 
         private void SecondTranslation_OnClick(object sender, RoutedEventArgs e)
         {
-            bool result = game.Guess(game.Vocab[game.Counter].t4);
+            this.Title = game.Vocab[game.Counter].right;
+            bool result = game.Guess(game.Vocab[game.Counter].t2);
             if (result)
             {
                secondTranslation.Background = new SolidColorBrush(Colors.Green);
@@ -42,6 +44,7 @@ namespace NewWords
         
         private void ThirdTranslation_OnClick(object sender, RoutedEventArgs e)
         {
+            this.Title = game.Vocab[game.Counter].right;
             bool result = game.Guess(game.Vocab[game.Counter].t3);
             if (result)
             {
@@ -55,7 +58,8 @@ namespace NewWords
         
         private void FourthTranslation_OnClick(object sender, RoutedEventArgs e)
         {
-            bool result = game.Guess(game.Vocab[game.Counter].t2);
+            this.Title = game.Vocab[game.Counter].right;
+            bool result = game.Guess(game.Vocab[game.Counter].t4);
             if (result)
             {
                 fourthTranslation.Background = new SolidColorBrush(Colors.Green);
@@ -80,6 +84,10 @@ namespace NewWords
 
         private void StartRound_OnClick(object sender, RoutedEventArgs e)
         {
+            firstTranslation.Background = new SolidColorBrush(Colors.Aqua);
+            secondTranslation.Background = new SolidColorBrush(Colors.Aqua);
+            thirdTranslation.Background = new SolidColorBrush(Colors.Aqua);
+            fourthTranslation.Background = new SolidColorBrush(Colors.Aqua);
             firstTLabel.Text = game.Vocab[game.Counter].t1; 
             secondTLabel.Text = game.Vocab[game.Counter].t2;
             thirdTLabel.Text = game.Vocab[game.Counter].t3;
