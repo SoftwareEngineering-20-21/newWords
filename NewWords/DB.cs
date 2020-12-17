@@ -7,7 +7,7 @@ namespace NewWords
 {
     public class AppContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
+
         public DbSet<Language> Languages { get; set; }
         public DbSet<LanguageWords> Dictionary { get; set; }
 
@@ -16,16 +16,10 @@ namespace NewWords
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite("Data Source=wordsApp.db");
     }
-    public class User
-    {
-        public int id { get; set; }
-        public string username { get; set; }
 
-    }
     public class LastResult
     {
         public int id { get; set; }
-        public int UserId { get; set; }
 
         public int AmountGuessed { get; set; }
         public int TotalAmount { get; set; }

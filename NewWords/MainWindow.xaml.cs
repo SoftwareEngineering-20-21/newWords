@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NewWords.Models;
 
 namespace NewWords
 {
@@ -21,6 +22,7 @@ namespace NewWords
     /// </summary>
     public partial class MainWindow : Window
     {
+        public GameContext game;
         public MainWindow()
         {
             
@@ -28,7 +30,20 @@ namespace NewWords
 
         private void playButton_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
 
+        private void resultsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PlayRoundButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.game = new GameContext();
+            Card firstCard = new Card(game);
+            firstCard.Owner = this;
+            firstCard.Show();
         }
     }
 }

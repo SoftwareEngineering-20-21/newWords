@@ -5,27 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewWords"
         mc:Ignorable="d"
-        Title="New Words" Height="1024" Width="1440">
+        Title="New Words" Height="1024" Width="1440" ResizeMode="NoResize">
     <Grid Height="1008" VerticalAlignment="Bottom">
-        <Grid x:Name="navBar" Width="1440" Height="100" Background="#45CF03" Margin="0,0,0,908">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="559*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="navBar" Width="1440" Height="100" Background="#45CF03" Margin="0,0,0,850" Grid.ColumnSpan="2">
             <Button x:Name="playButton" Width="480"  Margin="0,0,960,0" Background="Transparent" Click="playButton_Click">
                 <TextBlock Text="Play" FontSize="48" FontFamily="Roboto" Margin="171,21,216,17"></TextBlock>
             </Button>
-            <Button x:Name="resultsButton"  Margin="480,0,480,0"  Background="Transparent">
+            <Button x:Name="resultsButton"  Margin="480,0,480,0"  Background="Transparent" Click="resultsButton_Click">
                 <TextBlock Text="Results" FontSize="48" FontFamily="Roboto" Margin="146,20,144,29" RenderTransformOrigin="0.487,0.518"></TextBlock>
             </Button>
             <Button x:Name="helpButton" Width="480"  Margin="960,0,0,0" Height="100" Background="Transparent">
                 <TextBlock Text="Help" FontSize="48" FontFamily="Roboto" RenderTransformOrigin="0.187,0.5" Width="133"/>
             </Button>
         </Grid>
-        <Image Name="firstLangFlag" Width="318" Height="318" Margin="249,169,873,521"></Image>
-        <Image Name="secondLangFlag" Width="318" Height="318" Margin="878,169,244,521"></Image>
-        <TextBlock FontSize="30" Text="Pick your language" Margin="249,511,873,447" TextAlignment="Center"></TextBlock>
-        <TextBlock FontSize="30" Text="Pick target language" Margin="878,511,244,447" TextAlignment="Center"></TextBlock>
-        <ComboBox Name="firstLangPicker" Width="318" Height="48" Margin="249,566,873,394"></ComboBox>
-        <ComboBox Name="secondLangPicker" Width="318" Height="48" Margin="878,566,244,394" ></ComboBox>
-        <Button x:Name="playRoundButton" Width="318" Height="92" Background="#45FC03" BorderBrush="Black" Margin="240,674,864,242"/>
-        <Button x:Name="addWordsVutton" Width="318" Height="92" Background="#45FC03" BorderBrush="Black" Margin="859,674,225,242"/>
+        <Image Name="firstLangFlag" Width="318" Height="318" Margin="249,169,873,521" Grid.ColumnSpan="2"></Image>
+        <Image Name="secondLangFlag" Width="318" Height="318" Margin="556,169,244,521" Grid.Column="1"></Image>
+        <TextBlock FontSize="30" Text="Pick your language" Margin="249,511,873,447" TextAlignment="Center" Grid.ColumnSpan="2"></TextBlock>
+        <TextBlock FontSize="30" Text="Pick target language" Margin="556,511,244,447" TextAlignment="Center" Grid.Column="1"></TextBlock>
+        <ComboBox Name="firstLangPicker" Width="318" Height="48" Margin="249,566,873,394" Grid.ColumnSpan="2"  FontSize="32">
+            <ComboBoxItem Name="ukrF">Ukrainian</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="secondLangPicker" Width="318" Height="48" Margin="556,566,244,394" Grid.Column="1" FontSize="32">
+            <ComboBoxItem Name="engS">English</ComboBoxItem>
+        </ComboBox>
+        <Button 
+            x:Name="playRoundButton" 
+            Width="318" Height="92" Background="#45FC03" 
+            BorderBrush="Black" 
+            Margin="249,674,873,242" 
+            Grid.ColumnSpan="2" FontSize="48"
+            Click="PlayRoundButton_OnClick">
+            Play
+        </Button>
+        <Button x:Name="addWordsVutton" Width="318" Height="92" Background="#45FC03" BorderBrush="Black" Margin="556,674,244,242" Grid.Column="1"/>
 
     </Grid>
 </Window>
